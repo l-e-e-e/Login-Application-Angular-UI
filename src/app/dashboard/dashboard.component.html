@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Dashboard</h1>
+  <p>Welcome to the dashboard!</p>
+  <p>List of existing users:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Street Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>ZipCode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+
+        <td>{{ user.street }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.state }}</td>
+        <td>{{ user.zip }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button (click)="openCreateUserForm()">Create User</button>
+  <!-- <button (click)="deleteAllUsers()">Delete All Users</button> -->
+</div>
+<app-create-user-form *ngIf="showCreateUserForm" (onUserCreated)="onUserCreated($event)"></app-create-user-form>

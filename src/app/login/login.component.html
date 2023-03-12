@@ -1,0 +1,14 @@
+<form (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="username" class="field">Mobile Number:</label>
+      <input type="number" class="form-control" id="username" [(ngModel)]="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password" class="field">Password:</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+  
+  <app-dashboard *ngIf="isLoggedIn"></app-dashboard>
+  

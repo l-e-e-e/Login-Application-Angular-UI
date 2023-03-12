@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Create User</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label class="fields">
+        First Name:
+        <input type="text" formControlName="firstName">
+      </label>
+      <label class="fields">
+        Last Name:
+        <input type="text" formControlName="lastName">
+      </label>
+      <label class="fields">
+        Email:
+        <input type="email" formControlName="email">
+      </label>
+      <label class="fields">
+        Phone:
+        <input type="number" formControlName="phone">
+      </label>
+      <label class="fields">
+        Street Address:
+        <input type="text" formControlName="street">
+      </label>
+      <label class="fields">
+        City:
+        <input type="text" formControlName="city">
+      </label>
+      <label class="fields">
+        State:
+        <input type="text" formControlName="state">
+      </label>
+      <label class="fields">
+        Zip Code:
+        <input type="text" formControlName="zip">
+      </label >
+      <button type="submit">Create User</button>
+    </form>
+  </div>
+  
